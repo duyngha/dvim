@@ -12,6 +12,8 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     -- Navigate the dropdown list snippet
+    ["<C-p>"] = cmp.mapping.select_prev_item(),
+    ["<C-n>"] = cmp.mapping.select_next_item(),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -22,7 +24,7 @@ cmp.setup({
       select = true
     }),
     -- Use <Tab> as the automplete trigger
-    ["<Tab>"] = function()
+    ["<Tab>"] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
@@ -75,4 +77,3 @@ cmp.setup({
 --vim.cmd [[
 --  set completeopt=menuone,noinsert,noselect
 --  highlight! default link CmpItemKind CmpItemMenuDefault
---]]

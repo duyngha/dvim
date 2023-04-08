@@ -89,15 +89,15 @@ _G.packer_plugins = {
     path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
-  },
-  ["colorbuddy.nvim"] = {
-    loaded = true,
-    path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
   ["git.nvim"] = {
     loaded = true,
@@ -108,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -138,11 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -213,11 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "/Users/duynguyen/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-go"] = {
     loaded = true,

@@ -8,10 +8,7 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'glepnir/lspsaga.nvim'         -- LSP UIs
   use 'L3MON4D3/LuaSnip'             -- Snipppet
@@ -20,9 +17,9 @@ packer.startup(function(use)
 
   use 'hrsh7th/cmp-buffer'           -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp'         -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp'             -- Completion
+  --use 'hrsh7th/nvim-cmp'             -- Completion
 
-  use 'neovim/nvim-lspconfig'        -- LSP
+  use 'neovim/nvim-lspconfig' -- LSP
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -34,9 +31,9 @@ packer.startup(function(use)
     requires = {
       "nvim-lua/plenary.nvim",
     },
-    config = function()
-      require("after.plugin.null-ls.rc")
-    end,
+    --config = function()
+    --require("after.plugin.null-ls.rc")
+    --end,
   })                              -- Use Neovim as a language serer to inject LSP diagnostic, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
@@ -56,12 +53,11 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
 
-  --use "junegunn/vim-plug"                         -- Plugin manager
   use { "neoclide/coc.nvim", branch = 'release' } -- COC
 
   use { "fatih/vim-go" }
 
-  use { "akinsho/toggleterm.nvim", tag = '*' }
+  --use { "akinsho/toggleterm.nvim", tag = '*' }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -93,17 +89,18 @@ packer.startup(function(use)
       "saadparwaiz1/cmp_luasnip", -- Snippets source
       "L3MON4D3/LuaSnip",         -- Snippet engine
     },
-    config = function()
-      require("after.plugin.cmp.rc")
-    end
+    --config = function()
+    --require("after.plugin.cmp.rc")
+    --end
+  })
+
+  use({
+    "ellisonleao/gruvbox.nvim",
+    require = {
+      "tjdevries/colorbuddy.nvim"
+    }
   })
 end)
-
-require("toggleterm").setup {
-  direction = "horizontal",
-  size = 15,
-  open_mapping = [[<C-j>]]
-}
 
 local lsp = require("lsp-zero")
 
@@ -129,3 +126,12 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     underline = false,
   }
 )
+
+-- GRUVBOX
+require("gruvbox").setup({
+  contrast = "hard",
+  bold = false,
+  palette_overrides = {
+    gray = "#2ea542",
+  }
+})

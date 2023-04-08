@@ -1,3 +1,5 @@
+print("Hello, Duy. Welcome back!")
+
 require('base')
 require('highlights')
 require('maps')
