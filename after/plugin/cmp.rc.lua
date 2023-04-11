@@ -24,15 +24,18 @@ cmp.setup({
       select = true
     }),
     -- Use <Tab> as the automplete trigger
-    ["<Tab>"] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end,
+    --["<Tab>"] = function(fallback)
+    --if cmp.visible() then
+    --cmp.select_next_item()
+    --print('Hello')
+    --elseif luasnip.expand_or_jumpable() then
+    --luasnip.expand_or_jump()
+    --print("hello")
+    --else
+    --fallback()
+    --print("hello")
+    --end
+    --end,
     ["<S-Tab>"] = function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()

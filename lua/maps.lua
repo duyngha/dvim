@@ -33,3 +33,10 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+
+-- Mode lines
+keymap.set('n', '<A-Up>', ':m-2<CR>', { silent = true })
+keymap.set('n', '<A-Down>', ':m+<CR>', { silent = true })
+keymap.set('i', '<A-Up>', '<Esc>:m-2<CR>', { silent = true })
+keymap.set('i', '<A-Down>', '<Esc>:m+<CR>', { silent = true })
